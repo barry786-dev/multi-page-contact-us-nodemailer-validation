@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %> 
+    <title>About</title>
+  </head>
+  <body class="aboutpage">
+    <header class="header-pad">
+      <!-- The navigation menu -->
+      <%- include('partials/nav.ejs', {page: 'about'}) %>
+      <!--end of the nav bar-->
+    </header>
+    <main class="aboutmain margin_c">
+      <div class="about-section">
+        <h1 style="padding-bottom: 1em">About Us Page</h1>
+        <p style="margin-bottom: 0.8em">
+          I’m Mohamed Salim, the guy behind this site. I’ve been learning BJJ
+          for over five years and have a purple belt. You’ll usually find me on
+          the mats several times each week, in addition to pursuing my other
+          obsessions of health and fitness.
+        </p>
+        <p>
+          this site is designed to provide useful information and resources for
+          those pursuing their love of Bjj, Kyokushin and Muay-thai.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../images/about1.jpg" alt="barry" />
+        <div class="aboutcontainer">
+          <h2>M.Salim Barry</h2>
+          <p class="title">Checkmat member</p>
+          <p>I’m the guy behind this site.</p>
+          <p>mbrsyr@yahoo.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+      <!-- <h1>This page is under Construction </h1>
+<h1>Click on Home menu above to go back to the main page!</h1>
+<h1>Or click the back arrow to go back to the previous page where you were!</h1> -->
+    </main>
+    <!--here is the footer of the page-->
+    <%- include('partials/footer.ejs')%>
+    <!--here is the end of the footer of the page-->
+  </body>
+</html>
