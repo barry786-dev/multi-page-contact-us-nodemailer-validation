@@ -30,7 +30,7 @@
     * document. methods
 
 
-## what you must understand here about using POST method?
+## what you need to understand here about using POST method?
 Resource [Stackoverflow](https://stackoverflow.com/questions/58230804/what-is-the-difference-between-post-api-call-and-form-submission-with-post-metho).
 
 **There are multiple ways to submit a form from the browser:**
@@ -59,13 +59,19 @@ With #3 and #4, the form is sent via Javascript and the response comes back to y
 
 > When you submit a form via Ajax, the browser does nothing automatically with the server response. That response goes back to your Javascript and your script decides what to do with it. If you want your script to follow redirects, then you have to examine the response, see if it's a 3xx status, get the new URL from the appropriate header and set window.location to that new URL. That will then cause the browser to display the redirect page. But, you have to either program that yourself or find an Ajax library that offers a feature to do it form. A standard Ajax call just returns the form POST response back to your Javascript - that's all. Your script has to process that response and decide what to do next.
 
+## Ajax "Asynchronous JavaScript and XML"
+[Wiki - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))
+> Ajax is not a technology, but rather a programming concept. HTML and CSS can be used in combination to mark up and style information. The webpage can be modified by JavaScript to dynamically display—and allow the user to interact with the new information. The built-in XMLHttpRequest object is used to execute Ajax on webpages, allowing websites to load content onto the screen without refreshing the page. Ajax is not a new technology, nor is it a new language. Instead, it is existing technologies used in a new way.
+
+![Ajax vs Conventional](/public/images/Ajax-vergleich-en.svg.png)
+
 # What if you want to use fetch but still you want to redierect or render EJS file from front end.
 - Is it possible to render EJS from front end?
 
 > YES
 
-- What EJS doing work with?
-> The EJS file will be compiled into HTML and returned to the front end. the back end will render the EJS + front end framework.
+- How EJS doing the work?
+> The EJS file will be compiled into HTML and returned to the front end. the back end will render the EJS + frontEnd framework.
 
 - What if I sent EJS file as response to front end, how to render it?
 
@@ -126,9 +132,18 @@ document.contactForm.onsubmit = async (e) => {
   document.getElementById('recaptcha_check_empty').required = false;
 }`  
 
-# what did we try inside our CSS?
+## Error messeges Models.
+- We create EJS error models to help the user to see proper message of success or fail after submit the form.
+  - Success message
+  - Failures messages : (We planed for three cases)
+    - In case the error happened because of go over **reCaptcha**.
+    - In case that the error happened because wrong data entries.
+    - In case the failure was NOT from the user side but from the **server** side.
+> We planned to let the **USER** be sure about if his/her form submit **Success** OR **Not**, and where was the failure in the case of fail
 
-- We creat very simple responsive css to style the last HTML pages without using and flexbox or grid by only playing arround with @media and avoid PX unit 
+# What did we try inside our CSS?
+
+- We creat very simple responsive css to style the last HTML pages without using any flexbox or grid by only playing arround with `@media` and avoid `Pixel(PX)` unit 
 - Create an `index.html` page and a `posts` directory containing blog posts
 - Create a `images` directory containing images and `font` directory containing fonts
 - we used mostly Measurement units `vw, vh, rem ,em` instead of `px` as much as we can so the sizes of the page elements respond according to the size of each other.

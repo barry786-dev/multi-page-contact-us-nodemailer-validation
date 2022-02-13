@@ -48,7 +48,7 @@ document.contactForm.onsubmit = async (e) => {
   const myForm = document.getElementById('contact-form');
   const formData = new FormData(myForm);
   const captchaRsponse = formData.get('g-recaptcha-response');
-  console.log(captchaRsponse);
+  //console.log(captchaRsponse);
   try {
     const response = await fetch(
       `/contact${
