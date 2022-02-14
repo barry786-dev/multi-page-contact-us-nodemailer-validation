@@ -9,8 +9,8 @@ const fetch = require('node-fetch');
 const app = express();
 app.set('port', process.env.PORT || 3000);
 // add middleware to get the data using post request
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 //set and use ejs as view engine
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'views')));

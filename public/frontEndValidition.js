@@ -46,7 +46,9 @@ document.contactForm.onsubmit = async (e) => {
   e.preventDefault();
   // get the captch response
   const myForm = document.getElementById('contact-form');
+  //The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method.
   const formData = new FormData(myForm);
+  //Returns the first value associated with a given key from within a FormData object.
   const captchaRsponse = formData.get('g-recaptcha-response');
   //console.log(captchaRsponse);
   try {
@@ -65,7 +67,8 @@ document.contactForm.onsubmit = async (e) => {
       }
     );
     const answer = await response.text();
-    document.body.innerHTML = ejs.render(answer);
+    //document.body.innerHTML = ejs.render(answer);
+    document.body.innerHTML = answer;
     // deal with the answer
     //console.log(answer);
   } catch (error) {
