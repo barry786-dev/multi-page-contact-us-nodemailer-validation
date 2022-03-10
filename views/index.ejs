@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %> 
+    <title>Martial Arts</title>
+  </head>
+  <body class="indexbody">
+    <header class="indexheader">
+      <!-- The navigation menu -->
+      <%- include('partials/nav.ejs', {page: 'index'}) %>
+      <!--end of the nav bar-->
+      <div id="headicondiv">
+        <!--second part of the header come after the nav bar-->
+        <img id="headicon1" src="./images/headicon1.png" alt="judoicon" />
+        <h1>Martial Arts</h1>
+        <img id="headicon" src="./images/icon.png" alt="martial-art icon" />
+      </div>
+      <p>
+        "It is better to be a warrior in a garden than a gardener in a war.”
+      </p>
+      <p id="Samurai">~ The Samurai</p>
+    </header>
+    <main class="indexmain">
+      <section class="bjj">
+        <p>
+          “There is no losing in jiu jitsu. You either win or you learn”-<em>
+            Rickson Gracie</em
+          >
+        </p>
+        <div>
+          <p>
+            Brazilian Jiu-Jitsu (BJJ) is a grappling-based martial art whose
+            central theme is the skill of controlling a resisting opponent in
+            ways that force him to submit. Due to the fact that control is
+            generally easier on the ground than in a standing position, much of
+            the technique of Brazilian Jiu-Jitsu (BJJ) is centered around the
+            skill of taking an opponent down to the ground and wrestling for
+            dominant control positions from where the opponent can be rendered
+            harmless. <br /><a href="post1">Read more...</a>
+          </p>
+
+          <a href="post1"
+            ><img src="./images/bjj.jpg" alt="bjj fighters"
+          /></a>
+        </div>
+      </section>
+      <section class="Kyokushin">
+        <p>
+          "There is no comfort in the growth zone and no growth in the comfort
+          zone"-<em> Unknown fighter</em>
+        </p>
+        <div>
+          <a href="post2"
+            ><img src="./images/ky.jpg" alt="karate fighters"
+          /></a>
+          <p>
+            Kyokushin Karate is famous for being one of the “harder” substyles
+            of Karate. This style of Karate allows full contact sparring
+            (kumite) and does not use any protective gear, except for a mouth
+            guard and groin protection. They do not even use gloves or
+            protective headgear during tournament sparring events. Kyokushin
+            does not practice Olympic-style “sports” sparring. Kyokushin kumite
+            allows kicks against an opponent’s head, body and legs. It also
+            allows knee strikes and punches to an opponent’s body (but not to
+            their head).<br /><a href="post2">Read more...</a>
+          </p>
+        </div>
+      </section>
+      <section class="Muaythai">
+        <p>
+          “Train with the energy of a warrior and soon you will have the heart
+          of a warrior.”-<em>Yan Lei </em>
+        </p>
+        <div>
+          <p>
+            Muay Thai, which translates to “Thai Boxing”, is the national sport
+            of Thailand. It is a martial art with roots originating from
+            military use dating back to around the 13th century during the time
+            of the Sukhothai Kingdom. Muay Thai is known as the “Art of 8 limbs”
+            because it makes use of 8 points of contact namely, punches, elbows,
+            knees and kicks. This differs it from other stand-up combat sports
+            such as boxing (2 points - fists) and karate (4 points - fists and
+            feet). Today, Muay Thai is practised and competed not only in
+            Thailand, but also all around the world.<br /><a
+              href="post3.html"
+              >Read more...</a
+            >
+          </p>
+          <a href="post3"
+            ><img src="./images/mu.jpg" alt="Muay thai fighters"
+          /></a>
+        </div>
+      </section>
+    </main>
+    <!--here is the footer of the page-->
+    <%- include('partials/footer.ejs')%>
+    <!--here is the end of the footer of the page-->
+  </body>
+</html>

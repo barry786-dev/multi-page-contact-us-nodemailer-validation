@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Submited</title>
+  </head>
+  <body class="aboutpage">
+    <header class="header-pad">
+      <!-- The navigation menu -->
+      <%- include('partials/nav.ejs', {page: 'contact'}) %>
+      <!--end of the nav bar-->
+    </header>
+    <main class="aboutmain margin_c">
+      <div class="about-section">
+        <h1 style="padding-bottom: 1em">Submit NOT Success</h1>
+        <p style="margin-bottom: 0.8em">
+          Your request was NOT sent , Some information was wrong
+        </p>
+        <h2 style="color:red"><%= errMsg %></h2>
+        <p >we will redirect you to the home page</p>
+      </div>
+    </main>
+    <!--here is the footer of the page-->
+    <%- include('partials/footer.ejs')%>
+    <!--here is the end of the footer of the page-->
+  </body>
+</html>

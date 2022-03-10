@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>contact</title>
+    <script defer src="frontEndValidition.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="ejs.js"></script>
+  </head>
+  <body class="contactpage">
+    <header class="header-pad">
+      <!-- The navigation menu -->
+      <%- include('partials/nav.ejs', {page: 'contact'}) %>
+      <!--end of the nav bar-->
+    </header>
+    <main class="contactmain margin_c">
+      <h2>Contact Us</h2>
+      <div>
+        <h2 style="color: orange">Germany</h2>
+        <p>Sensei.Mohamed Salim Al-Barry</p>
+        <p>Fighters Street 15</p>
+        <p>1th Floor</p>
+        <p>53925 kall</p>
+        <i class="fas fa-at" style="font-size: 2em"></i>
+        <p style="display: inline">mbrsyr@martial-art.org</p>
+        <br />
+        <i class="fas fa-phone" style="font-size: 2em"></i>
+        <p style="display: inline">+49 1578-444-6611</p>
+      </div>
+      <h3>OR</h3>
+      <h3 style="font-size: 3em; margin-bottom: 1em">leave us a message:</h3>
+      <div class="formcontainer">
+        <form id="contact-form" name="contactForm">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Must be at less three letters"
+            minlength="3"
+            maxlength="20"
+            onkeydown="Check(event);"
+            oninput="collectData(event)"
+            required
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            minlength="3"
+            maxlength="20"
+            name="lastname"
+            placeholder="Must be at less three letters"
+            onkeydown="Check(event);"
+            oninput="collectData(event)"
+            required
+          />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="e-mail"
+            placeholder="Example: maher.barry@gmail.com"
+            oninput="collectData(event)"
+            required
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something..maximum 2000 letters"
+            style="height: 200px"
+            oninput="collectData(event)"
+            maxlength="2000"
+            required
+          ></textarea>
+
+          <div style="position: relative">
+            <div
+              class="g-recaptcha"
+              data-sitekey="<%= sitKey %>"
+              data-size="visible"
+              data-callback="recaptchaCallback"
+            ></div>
+            <input
+              id="recaptcha_check_empty"
+              tabindex="-1"
+              style="
+                width: 50px;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                bottom: 0;
+              "
+              required
+            />
+          </div>
+
+          <input id="submit-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+    <!--here is the footer of the page-->
+    <%- include('partials/footer.ejs')%>
+    <!--here is the end of the footer of the page-->
+  </body>
+</html>
