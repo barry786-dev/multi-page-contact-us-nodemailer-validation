@@ -66,9 +66,9 @@ document.contactForm.onsubmit = async (e) => {
         body: JSON.stringify(data),
       }
     );
-    console.log(response)
+    console.log(response);
     const answer = await response.text();
-    //document.body.innerHTML = ejs.render(answer);
+    //document.body.innerHTML = ejs.render(answerrequired);
     document.body.innerHTML = answer;
     // deal with the answer
     //console.log(answer);
